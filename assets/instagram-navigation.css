@@ -1,0 +1,109 @@
+/* Add this to your theme's CSS file (theme.scss.liquid or style.css) */
+
+/* Container for the scrollable navigation */
+.scrollable-nav-container-insta {
+    overflow-x: auto; /* Enables horizontal scrolling */
+    white-space: nowrap; /* Prevents items from wrapping */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS devices */
+    border-bottom: 1px solid #ddd; /* Optional: Adds a bottom border */
+    padding: 10px 0; /* Optional: Padding for the container */
+    background-color: #f9f9f9; /* Optional: Background color */
+}
+
+/* The actual navigation list */
+.scrollable-nav {
+    display: inline-block; /* Keeps the list in a single line */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+    list-style-type: none; /* Removes bullet points */
+}
+
+/* Each navigation item */
+.nav-item-insta {
+    display: inline-block; /* Keeps the items in a single line */
+    margin-right: 20px; /* Space between items */
+}
+
+/* Links inside each navigation item */
+.nav-item-insta a {
+    text-decoration: none; /* Removes underlines from links */
+    color: #333; /* Link text color */
+    display: block; /* Makes the link clickable over the entire area */
+    transition: background-color 0.3s; /* Smooth background color change */
+}
+
+/* Hover effect for the links */
+.nav-item-insta a:hover {
+    background-color: #e0e0e0; /* Background color on hover */
+    color: #000; /* Text color on hover */
+}
+
+.scrollable-nav-container-insta::-webkit-scrollbar {
+    width: 12px; 
+    height: 2px; 
+}
+
+.scrollable-nav-container-insta::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 10px; 
+}
+
+.scrollable-nav-container-insta::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the thumb */
+    border-radius: 10px; /* Optional: Rounded corners for the thumb */
+}
+
+.scrollable-nav-container-insta::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the thumb when hovered */
+}
+.scrollable-nav-container-insta {
+    scrollbar-width: thin; /* Sets the scrollbar width to thin */
+    scrollbar-color: #888 #f1f1f1; /* thumb color, track color */
+}
+
+img.nav-image-insta {
+    border-radius: 100px;
+    border: 3px solid white;
+}
+a.nav-link-insta {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+.nav-image-container-insta {
+    display: flex;
+    border-radius: 100px;
+    padding: 3px;
+    border: none;
+}
+span.nav-title-insta {
+    text-align: center;
+    line-height: 110%;
+}
+@media (min-width: 767px){
+  .story-navigation{
+    display: none !important;
+  }
+}
+.template-product .story-navigation{ 
+  display: none;
+}
+.story_container {
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  min-width: 600px;
+  max-width: 100%;
+  margin: 10px 0px 10px 10px;
+  justify-content: space-around;
+}
+.story-navigation {
+  max-width: 100%;
+  overflow-x: scroll;
+}
+a.nav-link-insta:hover {
+    background: transparent;
+    color: grey;
+  text-decoration: underline;
+}

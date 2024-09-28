@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="{{ 'instagram-navigation.css' | asset_url }}">
+
+<li class="nav-item-insta" style="margin-right: {{ block.settings.item_spacing }}px;">
+    <a href="{{ block.settings.link_url }}" class="nav-link-insta">
+        
+            {%- if block.settings.show_gradient != blank -%}
+                {% assign border_style = 'background: ' | append: 'linear-gradient(' | append: block.settings.gradient_angle | append: 'deg, ' | append: block.settings.gradient_color_1 | append: ', ' | append: block.settings.gradient_color_2 | append: ')' %}
+            {%- else -%}
+                {% assign border_style = 'background: ' | append: block.settings.border_color %}
+            {%- endif -%}
+
+        <div class="nav-image-container-insta" style="{{ border_style }}">
+            {{ block.settings.link_image | image_url: width: 75, height: 75 | image_tag: alt: block.settings.link_title, class: 'nav-image-insta', height: 75 }}
+        </div>
+        <span class="nav-title-insta">{{ block.settings.link_title }}</span>
+    </a>
+</li>
+
+
+

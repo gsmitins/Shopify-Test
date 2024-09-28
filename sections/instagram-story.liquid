@@ -1,0 +1,106 @@
+<div class="section-id-{{ section.id }} story-navigation">
+  <div class="story_container">
+    {% for block in section.blocks %}
+      {% render 'story-navigation-block', block: block %}
+    {% endfor %}
+  </div>
+</div>
+
+
+
+
+
+{% schema %}
+
+{
+  "name": "instagram story",
+  "class": "instagram-story",
+  "disabled_on": {
+    "groups": [
+      "aside"
+    ]
+  },
+  
+      "max_blocks": 20,
+      "settings": [
+        
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Collection list"
+          }
+        
+      ],
+     "blocks": [
+       {
+       "type": "collection",
+      "name": "Collection",
+      "settings": [
+    
+          {
+              "type": "url",
+              "id": "link_url",
+              "label": "Link URL"
+          },
+          {
+              "type": "text",
+              "id": "link_title",
+              "label": "Link Title"
+          },
+          {
+              "type": "image_picker",
+              "id": "link_image",
+              "label": "Link Image"
+          },
+          {
+              "type": "number",
+              "id": "item_spacing",
+              "label": "Item Spacing (px)",
+              "default": 20
+          },
+          {
+              "type": "color",
+              "id": "border_color",
+              "label": "Border Color"
+          },
+          {
+              "type": "checkbox",
+              "id": "show_gradient",
+              "label": "Show Gradient"
+          },
+          {
+              "type": "color",
+              "id": "gradient_color_1",
+              "label": "Gradient Color 1"
+          },
+          {
+              "type": "color",
+              "id": "gradient_color_2",
+              "label": "Gradient Color 2"
+          },
+          {
+              "type": "range",
+              "id": "gradient_angle",
+              "label": "Gradient Angle",
+              "default": 90,
+              "min": 0,
+              "max": 360,
+              "step": 10
+          }
+        ]
+      }
+     ],
+    "presets": [
+    {
+      "name": "Instagram Navigation",
+      "settings": {
+      },
+      "blocks": [
+
+        ]
+      }
+    ]   
+  }
+
+{% endschema %}
