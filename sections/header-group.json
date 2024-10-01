@@ -117,7 +117,7 @@
         "enable_sticky": true,
         "enable_transparent": false,
         "transparent_color": "#ffffff",
-        "menu_linklist": "",
+        "menu_linklist": "new-main-menu",
         "menu_layout": "inline-menu-left",
         "nav_featured_link": "Sale",
         "menu_linklist_mobile": "",
